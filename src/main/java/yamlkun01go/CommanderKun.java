@@ -11,11 +11,12 @@ public class CommanderKun {
 		default public void action() {}
 	}
 	
+	
 	public interface HandlerCommand extends Handler {
 		public void handleCommand(Scanner scanner) ;
 	}
 
-	public static final String A = ">"; 
+	public static final String PROMPT = ">"; 
 	
 	final Map<String, Handler> map = new HashMap<String, CommanderKun.Handler>();
 	
@@ -38,7 +39,7 @@ public class CommanderKun {
 	}
 	
 	void print() {
-		System.out.print(A);
+		System.out.print(PROMPT);
 	}
 	
 }
